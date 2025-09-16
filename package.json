@@ -1,0 +1,28 @@
+{
+    "name": "lambda-debt-capacity",
+    "version": "1.0.0",
+    "description": "Pragma BootCamp Java Backend - Lambda Debt Capacity",
+    "main": "handler.js",
+    "scripts": {
+        "test": "serverless invoke local --function debtCapacity --path ./test-data.json",
+        "deploy": "serverless deploy --stage dev --verbose --aws-profile default",
+        "remove": "serverless remove --stage dev --aws-profile default"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/juanfix/pragma-lambda-debt-capacity"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/juanfix/pragma-lambda-debt-capacity/issues"
+    },
+    "homepage": "https://github.com/juanfix/pragma-lambda-debt-capacity#readme",
+    "devDependencies": {
+        "serverless-dotenv-plugin": "^6.0.0"
+    },
+    "dependencies": {
+        "@aws-sdk/client-sqs": "^3.888.0"
+    }
+}

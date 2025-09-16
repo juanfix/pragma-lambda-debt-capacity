@@ -1,0 +1,22 @@
+{
+    "body": {
+        "totalIncome": 4000000,
+        "activeLoans": [
+            {
+                "id": 1,
+                "amount": 1000000,
+                "term": 6,
+                "loanType": {
+                    "interestRate": 12.2
+                }
+            }
+        ],
+        "newLoan": {
+            "id": 9,
+            "amount": 6320000,
+            "interestRate": 12.2,
+            "term": 20
+        },
+        "email": "juanfix@gmail.com"
+    }
+}
