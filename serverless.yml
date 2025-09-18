@@ -23,6 +23,8 @@ provider:
     QUEUE_SQS_EMAIL_SENDER_URL: ${env:QUEUE_SQS_EMAIL_SENDER_URL}
     QUEUE_DEBT_CAPACITY_ARN: ${env:QUEUE_DEBT_CAPACITY_ARN}
     QUEUE_DEBT_CAPACITY_URL: ${env:QUEUE_DEBT_CAPACITY_URL}
+    QUEUE_UPDATE_REPORT_ARN: ${env:QUEUE_UPDATE_REPORT_ARN}
+    QUEUE_UPDATE_REPORT_URL: ${env:QUEUE_UPDATE_REPORT_URL}
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -30,6 +32,7 @@ provider:
       Resource:
         - ${env:QUEUE_SQS_EMAIL_SENDER_ARN}
         - ${env:QUEUE_DEBT_CAPACITY_ARN}
+        - ${env:QUEUE_UPDATE_REPORT_ARN}
 
 functions:
   debtCapacity:

@@ -43,7 +43,7 @@ exports.calculateDebtCapacity = ({ totalIncome, activeLoans, newLoan }) => {
       cuota: cuotaNewLoan.toFixed(2),
       interestPayment: interestPayment.toFixed(2),
       capitalPayment: capitalPayment.toFixed(2),
-      remainingBalance: balance.toFixed(2),
+      remainingBalance: Math.abs(balance).toFixed(2),
     });
   }
 

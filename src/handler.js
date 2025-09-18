@@ -1,6 +1,7 @@
 const { calculateDebtCapacity } = require('./helpers/functions');
 const { sendToSqsEmailSender } = require('./sqs/sqsEmailSenderConfig');
 const { sendToSqsDebtCapacity } = require('./sqs/sqsDebtCapacityConfig');
+const { sendToSqsUpdateReport } = require('./sqs/sqsUpdateReportConfig');
 const { errorResponse, successResponse } = require('./config/responseHandler');
 const { logInfo, logError } = require('./config/logHandler');
 
@@ -35,6 +36,8 @@ exports.debtCapacity = async (event) => {
       'Validación automática',
       `El resultado de la validacion automatica es ${jsonResult.decision} con el plan de pago: \n${cuotaList}`
     );
+
+    await sendToSqsUpdateReport(body.newLoan.amount, jsonResult.decision);
 
     return successResponse(jsonResult);
   } catch (error) {

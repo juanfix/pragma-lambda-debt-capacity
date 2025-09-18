@@ -13,7 +13,7 @@
         ],
         "newLoan": {
             "id": 9,
-            "amount": 6320000,
+            "amount": 2600000,
             "interestRate": 12.2,
             "term": 20
         },
