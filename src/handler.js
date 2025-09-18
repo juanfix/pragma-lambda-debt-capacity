@@ -37,7 +37,7 @@ exports.debtCapacity = async (event) => {
       `El resultado de la validacion automatica es ${jsonResult.decision} con el plan de pago: \n${cuotaList}`
     );
 
-    await sendToSqsUpdateReport(body.newLoan.amount, jsonResult.decision);
+    /*await sendToSqsUpdateReport(body.newLoan.amount, jsonResult.decision);*/
 
     return successResponse(jsonResult);
   } catch (error) {
